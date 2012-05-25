@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{unfuddle}
-  s.version = "0.1.1"
+  s.name = %q{jl-unfuddle}
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tim Matheson"]
@@ -14,7 +14,6 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://www.timmatheson.com}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Unfuddle", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
-  s.rubyforge_project = %q{unfuddle}
   s.rubygems_version = %q{1.3.4}
   s.summary = %q{Integrates your rails app with Unfuddle API and Rack}
 
