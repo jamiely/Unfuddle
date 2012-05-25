@@ -22,6 +22,7 @@ module Unfuddle
     ActiveResource::Base.site     = config["uri"]
     ActiveResource::Base.user     = config["username"]
     ActiveResource::Base.password = config["password"]
+    ActiveResource::Base.format   = :xml
 end
 
-(Dir.entries("lib/unfuddle/") - [".","..",".git",".svn"]).each{ |f| require "lib/unfuddle/" + f }
+(Dir.entries(File.dirname(__FILE__) + "/unfuddle/") - [".","..",".git",".svn"]).each{ |f| require "lib/unfuddle/" + f }
