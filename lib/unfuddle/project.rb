@@ -1,7 +1,8 @@
 module Unfuddle
   class Project < ActiveResource::Base    
-    def tickets
-      Ticket.find(:all, :from => "/projects/#{id}/tickets")
+    def tickets(params = {})
+      params = {:limit => 100, :page => 1}.merge params
+      Ticket.find :all, :from => "/projects/#{id}/tickets", :params => params
     end
     
     def self.all
@@ -9,3 +10,4 @@ module Unfuddle
     end
   end
 end
+
