@@ -25,4 +25,5 @@ module Unfuddle
     ActiveResource::Base.format   = :xml
 end
 
-(Dir.entries(File.dirname(__FILE__) + "/unfuddle/") - [".","..",".git",".svn"]).each{ |f| require "lib/unfuddle/" + f }
+(Dir.entries(File.dirname(__FILE__) + "/unfuddle/") - [".","..",".git",".svn"]).each{ |f| require File.dirname(__FILE__) + "/unfuddle/" + f }
+
