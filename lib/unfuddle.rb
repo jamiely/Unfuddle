@@ -13,7 +13,7 @@ module Unfuddle
 
     def self.config 
       if File.exists?(config_path)
-        return YAML.load_file(config_path)["#{env}"]
+        return YAML.load(ERB.new(File.read(config_path)).result)["#{env}"]
       else
         raise Exception, "Missing #{config_path} yaml file."
       end
